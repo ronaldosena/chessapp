@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { StyleSheet, Image, Text } from "react-native";
+import { StyleSheet, Image } from "react-native";
 import { PanGestureHandler } from "react-native-gesture-handler";
 import Animated, {
   runOnJS,
@@ -39,8 +39,6 @@ interface PieceProps {
   id: Piece;
   position: any;
   chess: any;
-  // enabled: any;
-  // startPosition: any;
   onTurn: () => void;
 }
 
@@ -66,9 +64,9 @@ const Piece = ({ id, position, chess, onTurn }: PieceProps) => {
         isGestureActive.value = false;
       });
       if (move) {
+        console.log("move = ", move);
         console.log("gamestate = ", chess.board());
-        chess.move(to);
-        console.log("gamestate = ", chess.board());
+        chess.move({ to: to, from: from });
         onTurn();
       }
     },
@@ -137,7 +135,6 @@ const Piece = ({ id, position, chess, onTurn }: PieceProps) => {
       <PanGestureHandler onGestureEvent={onGestureEvent}>
         <Animated.View style={piece}>
           <Image source={PIECES[id]} style={styles.piece} />
-          <Text>{id}</Text>
         </Animated.View>
       </PanGestureHandler>
     </>
