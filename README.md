@@ -25,7 +25,7 @@
 
 ## About The Project
 
-[![Chess app][demo-gif]](https://example.com)
+[![Chess app][demo-gif]](https://github.com/ronaldosena/chessapp)
 
 This is an ongoing project to create my own chess app, with some of my favorite feature from popular chess websites and apps.
 The basic functionalities are working, but there is a lot of work to be done!
@@ -100,4 +100,4 @@ You can reach me out at [@roronalds\_](https://twitter.com/roronalds_) or send a
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
-[demo-gif]: assets/qrcode_expo.png
+[demo-gif]: assets/chessapp.gif
